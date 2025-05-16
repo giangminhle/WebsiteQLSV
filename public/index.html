@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Website Quản Lý Sinh Viên</h1>
+    </header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo Trường" class="school-logo">
+       
+    </div>
+    <div class="container">
+        <!-- Menu Chính -->
+        <nav class="main-menu" style="margin-bottom: 24px; display:none;">
+            <button id="menu-student">Quản lý sinh viên</button>
+            <button id="menu-score">Quản lý điểm</button>
+        </nav>
+
+        <!-- Quản lý sinh viên -->
+        <div id="student-section">
+            <!-- Form Đăng Nhập -->
+            <form id="login-form">
+                <h2>Đăng Nhập</h2>
+                <input type="text" id="username" placeholder="Tên Đăng Nhập" required>
+                <input type="password" id="password" placeholder="Mật Khẩu" required>
+                <input type="submit" value="Đăng Nhập">
+            </form>
+            <!-- Form Thêm Sinh Viên -->
+            <form id="add-student-form" style="display: none;">
+                <h2>Thêm Sinh Viên</h2>
+                <input type="text" placeholder="Họ và Tên" required>
+                <input type="text" placeholder="Mã Số Sinh Viên" required>
+                <input type="date" placeholder="Ngày Sinh" required>
+                <input type="text" placeholder="Địa Chỉ" required>
+                <select name="GioiTinh" required>
+                    <option value="">Chọn Giới Tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+                <input type="text" placeholder="Số Điện Thoại" required>
+                <select id="select-khoa" name="Khoa" required>
+                    <option value="">Chọn Khoa</option>
+                    <!-- JS sẽ render các option ở đây -->
+                </select>
+                <select id="select-lop" name="Lop" required>
+                    <option value="">Chọn Lớp</option>
+                    <!-- JS sẽ render các option ở đây -->
+                </select>
+                <div id="khoa-info" style="margin: 8px 0; font-weight: bold;"></div>
+                <input type="submit" value="Thêm Sinh Viên">
+            </form>
+            <!-- Bảng Danh Sách Sinh Viên -->
+            <table class="table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ Tên</th>
+                        <th>Ngày Sinh</th>
+                        <th>Địa Chỉ</th>
+                        <th>Giới Tính</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Lớp</th>
+                        <th>Khoa</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Quản lý điểm -->
+        <div id="score-section" style="display:none;">
+            <form id="add-score-form" style="margin-top:24px;">
+                <h2>Nhập/Cập nhật điểm sinh viên</h2>
+                <input type="text" id="score-mssv" placeholder="Mã số sinh viên" required>
+                <select id="score-monhoc" required>
+                    <option value="">Chọn môn học</option>
+                </select>
+                <input type="number" id="score-diem" placeholder="Điểm" min="0" max="10" step="0.1" required>
+                <input type="submit" value="Lưu điểm">
+            </form>
+            <table id="score-table" class="table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Tên sinh viên</th>
+                        <th>Môn học</th>
+                        <th>Điểm</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        &copy; Lê Giang x Mai Đạt
+
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+

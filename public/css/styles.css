@@ -1,0 +1,195 @@
+/* Nền gradient */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Logo trường */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 12px 0;
+}
+.school-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    background: #fff;
+    padding: 8px;
+}
+
+/* Container căn giữa */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.95); /* giảm từ 0.7 xuống 0.4 */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 32px;
+}
+
+/* Header */
+header h1 {
+    background: rgba(0, 0, 0, 0.4); /* nền đen mờ */
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* thêm bóng chữ */
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* Form login và thêm sinh viên */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    background: rgba(255,255,255,0.85); /* giảm từ 0.85 xuống 0.25 */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 24px 16px;
+}
+
+form h2 {
+    flex-basis: 100%;
+    text-align: center;
+    color: #009688;
+    margin-bottom: 12px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="date"],
+form select {
+    padding: 8px 10px;
+    border: 1px solid #b2dfdb;
+    border-radius: 6px;
+    font-size: 1rem;
+    min-width: 160px;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="date"]:focus,
+form select:focus {
+    border: 1.5px solid #009688;
+    outline: none;
+    background: #fff;
+}
+
+form input[type="submit"] {
+    background: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: 8px;
+}
+
+form input[type="submit"]:hover {
+    background: #00796b;
+}
+
+/* Thông tin khoa */
+#khoa-info {
+    flex-basis: 100%;
+    text-align: right;
+    color: #00796b;
+    font-size: 1.05rem;
+    margin-bottom: -8px;
+}
+
+/* Bảng sinh viên */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-top: 12px;
+}
+
+.table th, .table td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+    background: #009688;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover {
+    background: #e0f2f1;
+}
+
+.table button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.table button:hover {
+    background: #00796b;
+}
+
+/* Menu chính */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.main-menu button {
+    background: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.main-menu button:hover {
+    background: #00796b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    color: #ffff;
+    margin: 32px 0 12px 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    background: transparent;
+}
